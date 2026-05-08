@@ -10,201 +10,283 @@
 
 <style>
 
-/* ===== SAME DESIGN (NO CHANGE) ===== */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Hind Siliguri',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f3f5f9;
+background:#f6f7fb;
 color:#111827;
 }
 
+/* NAVBAR */
+
 .navbar{
 width:100%;
-background:#071b36;
-padding:18px 8%;
+padding:15px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
 z-index:999;
+background:linear-gradient(90deg,#071b36,#0f2d57);
 }
 
 .logo{
-font-size:30px;
+font-size:28px;
 font-weight:700;
-color:white;
+color:#fff;
 }
 
-.logo span{ color:#ff8a00; }
+.logo span{
+color:#ffb300;
+}
 
-.nav-links{ display:flex; gap:25px; }
+.nav-links{
+display:flex;
+gap:20px;
+}
 
 .nav-links a{
 text-decoration:none;
 color:white;
-font-size:17px;
-font-weight:500;
+font-size:15px;
+font-weight:600;
 }
 
-.nav-links a:hover{ color:#ff8a00; }
+/* HERO */
 
 .hero{
 width:100%;
-min-height:85vh;
+min-height:58vh;
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:60px 8%;
+padding:50px 5%;
 background:
-linear-gradient(rgba(4,15,34,.88),rgba(4,15,34,.88)),
+linear-gradient(rgba(7,18,40,.45),rgba(7,18,40,.45)),
 url('https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 color:white;
 }
 
-.hero-left{ max-width:550px; }
-
-.badge{
-display:inline-block;
-padding:8px 18px;
-border-radius:30px;
-background:#ff8a00;
-font-size:14px;
-margin-bottom:18px;
+.hero-left{
+max-width:560px;
 }
 
-.hero-left h1{ font-size:60px; line-height:1.1; margin-bottom:20px; }
+.hero-left h1{
+font-size:48px;
+line-height:1.2;
+margin-bottom:15px;
+}
 
-.hero-left p{ font-size:20px; line-height:1.7; margin-bottom:25px; }
+.hero-left p{
+font-size:17px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+/* BUTTON */
 
 .hero-btn{
 display:inline-block;
-padding:16px 35px;
-background:#ff8a00;
+padding:14px 30px;
+background:linear-gradient(45deg,#ffb300,#ff7b00);
 color:white;
 text-decoration:none;
-font-size:20px;
+font-size:16px;
 font-weight:700;
-border-radius:12px;
+border-radius:14px;
+transition:.3s;
 }
 
-.section{ padding:80px 8%; }
+.hero-btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTION */
+
+.section{
+padding:45px 5%;
+}
 
 .section-title{
-font-size:42px;
+font-size:32px;
 text-align:center;
-margin-bottom:50px;
+margin-bottom:30px;
 }
 
+/* PRODUCTS */
+
 .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+display:flex;
+flex-direction:column;
 gap:25px;
 }
 
 .card{
 background:white;
-border-radius:25px;
+border-radius:24px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .card img{
 width:100%;
-height:260px;
-object-fit:cover;
+height:auto;
+max-height:430px;
+object-fit:contain;
+background:#fff;
+padding:12px;
 }
 
-.card-body{ padding:22px; }
-
-.discount{
-background:#071b36;
-color:white;
-display:inline-block;
-padding:6px 14px;
-border-radius:20px;
-font-size:14px;
-margin-bottom:12px;
+.card-body{
+padding:18px;
 }
 
-.card-title{ font-size:30px; font-weight:700; margin-bottom:10px; }
+.card-title{
+font-size:26px;
+font-weight:700;
+margin-bottom:6px;
+}
 
 .old-price{
+font-size:15px;
 text-decoration:line-through;
-color:#6b7280;
-font-size:18px;
+color:#9ca3af;
 }
 
 .new-price{
-font-size:36px;
+font-size:32px;
 font-weight:700;
 color:#ff8a00;
-margin-top:10px;
+margin-top:6px;
 }
 
-.features{ margin-top:15px; line-height:2; color:#374151; }
+/* DESCRIPTION */
+
+.desc-btn{
+margin-top:14px;
+background:#fff3d0;
+padding:11px;
+border-radius:12px;
+cursor:pointer;
+font-size:14px;
+font-weight:700;
+}
+
+.features{
+display:none;
+margin-top:12px;
+font-size:14px;
+line-height:1.8;
+background:#f9fafb;
+padding:12px;
+border-radius:10px;
+}
+
+/* ORDER BUTTON */
 
 .order-btn{
 width:100%;
-padding:16px;
+padding:14px;
+margin-top:16px;
 border:none;
 border-radius:14px;
-margin-top:20px;
-background:#ff8a00;
+background:linear-gradient(45deg,#ffb300,#ff7b00);
 color:white;
-font-size:18px;
+font-size:16px;
 font-weight:700;
 cursor:pointer;
 }
 
+/* FORM */
+
 .order-form{
 display:none;
-margin-top:20px;
-padding:20px;
+margin-top:15px;
+padding:15px;
+border-radius:14px;
 background:#f8fafc;
-border-radius:18px;
-border:2px solid #e2e8f0;
 }
 
 .order-form input,
 .order-form textarea{
 width:100%;
-padding:14px;
-margin-top:12px;
+padding:13px;
+margin-top:10px;
 border:none;
 outline:none;
-border-radius:12px;
-background:#e2e8f0;
-font-size:16px;
+border-radius:10px;
+background:#e5e7eb;
 }
 
 .confirm-btn{
 width:100%;
-padding:15px;
-margin-top:15px;
+padding:13px;
+margin-top:12px;
 border:none;
-border-radius:14px;
+border-radius:12px;
 background:#16a34a;
 color:white;
-font-size:18px;
+font-size:15px;
 font-weight:700;
 cursor:pointer;
 }
 
+/* FOOTER */
+
 .footer{
-background:#071b36;
-color:white;
-padding:35px;
+margin-top:40px;
+padding:28px;
 text-align:center;
-margin-top:60px;
+background:linear-gradient(90deg,#071b36,#0f2d57);
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo{
+font-size:22px;
+}
+
+.hero{
+min-height:42vh;
+padding:35px 5%;
+}
+
+.hero-left h1{
+font-size:30px;
+}
+
+.hero-left p{
+font-size:14px;
+}
+
+.products{
+gap:18px;
+}
+
+.card img{
+max-height:260px;
+}
+
+.card-title{
+font-size:19px;
+}
+
+.new-price{
+font-size:24px;
+}
+
 }
 
 </style>
@@ -213,109 +295,170 @@ margin-top:60px;
 <body>
 
 <!-- NAVBAR -->
+
 <nav class="navbar">
 
-<div class="logo">স্বপ্ন <span>শপ</span></div>
+<div class="logo" id="logoText">
+স্বপ্ন <span>শপ</span>
+</div>
 
 <div class="nav-links">
 <a href="#">হোম</a>
 <a href="#products">প্রোডাক্ট</a>
-<a href="#">রিভিউ</a>
-<a href="#">যোগাযোগ</a>
 </div>
 
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+
+<section class="hero" id="heroSection">
 
 <div class="hero-left">
 
-<div class="badge">🔥 ২০% বিশেষ ছাড়</div>
+<h1 id="heroText">
+আপনার রান্নার সেরা সঙ্গী
+</h1>
 
-<h1>আপনার রান্নার<br>সেরা সঙ্গী</h1>
+<p id="heroSubText">
+প্রিমিয়াম ব্লেন্ডার দিয়ে তৈরি করুন স্বাস্থ্যকর ও সুস্বাদু খাবার।
+</p>
 
-<p>প্রিমিয়াম ব্লেন্ডার দিয়ে তৈরি করুন স্বাস্থ্যকর ও সুস্বাদু খাবার।</p>
-
-<a href="#products" class="hero-btn">এখনই কিনুন</a>
+<a href="#products" class="hero-btn">
+এখনই অর্ডার করুন
+</a>
 
 </div>
 
 </section>
 
-<!-- PRODUCTS (DYNAMIC) -->
+<!-- PRODUCTS -->
+
 <section class="section" id="products">
 
-<h2 class="section-title">আমাদের জনপ্রিয় প্রোডাক্ট</h2>
+<h2 class="section-title">
+আমাদের জনপ্রিয় প্রোডাক্ট
+</h2>
 
 <div class="products" id="productList"></div>
 
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-© ২০২৬ স্বপ্ন শপ | All Rights Reserved
+
+<footer class="footer" id="footerText">
+© ২০২৬ স্বপ্ন শপ
 </footer>
 
 <!-- FIREBASE -->
+
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
 <script>
 
 const firebaseConfig = {
-apiKey: "AIzaSyAzXwo_DPBe6PQPiTvqkefiLE2Mo3D3B0E",
-authDomain: "kotkoti.firebaseapp.com",
-databaseURL: "https://kotkoti-default-rtdb.asia-southeast1.firebasedatabase.app",
-projectId: "kotkoti",
-storageBucket: "kotkoti.firebasestorage.app"
+
+apiKey:"AIzaSyAzXwo_DPBe6PQPiTvqkefiLE2Mo3D3B0E",
+authDomain:"kotkoti.firebaseapp.com",
+databaseURL:"https://kotkoti-default-rtdb.asia-southeast1.firebasedatabase.app",
+projectId:"kotkoti"
+
 };
 
 firebase.initializeApp(firebaseConfig);
+
 const db = firebase.database();
 
-/* =========================
-   LOAD PRODUCTS REALTIME
-========================= */
+/* SETTINGS */
 
-db.ref("products").on("value", (snapshot) => {
+db.ref("settings/logo").on("value",(snap)=>{
+if(snap.exists()){
+document.getElementById("logoText").innerHTML = snap.val();
+}
+});
 
-let container = document.getElementById("productList");
-container.innerHTML = "";
+db.ref("settings/heroText").on("value",(snap)=>{
+if(snap.exists()){
+document.getElementById("heroText").innerText = snap.val();
+}
+});
 
-snapshot.forEach((child) => {
+db.ref("settings/subText").on("value",(snap)=>{
+if(snap.exists()){
+document.getElementById("heroSubText").innerText = snap.val();
+}
+});
 
-let data = child.val();
+db.ref("settings/background").on("value",(snap)=>{
+if(snap.exists()){
 
-container.innerHTML += `
+document.getElementById("heroSection").style.background =
+`linear-gradient(rgba(7,18,40,.45),rgba(7,18,40,.45)),
+url(${snap.val()}) center/cover no-repeat`;
+
+}
+});
+
+db.ref("settings/footer").on("value",(snap)=>{
+if(snap.exists()){
+document.getElementById("footerText").innerText = snap.val();
+}
+});
+
+/* PRODUCTS */
+
+db.ref("products").on("value",(snapshot)=>{
+
+let box = document.getElementById("productList");
+
+box.innerHTML = "";
+
+snapshot.forEach((child)=>{
+
+let p = child.val();
+
+box.innerHTML += `
+
 <div class="card">
 
-<img src="${data.image}">
+<img src="${p.image}" alt="product">
 
 <div class="card-body">
 
-<div class="discount">${data.discount}</div>
+<div class="card-title">
+${p.name || ""}
+</div>
 
-<div class="card-title">${data.name}</div>
+<div class="old-price">
+৳${p.oldPrice || ""}
+</div>
 
-<div class="old-price">৳${data.oldPrice}</div>
+<div class="new-price">
+৳${p.newPrice || ""}
+</div>
 
-<div class="new-price">৳${data.newPrice}</div>
+<div class="desc-btn" onclick="toggleDesc(this)">
+📄 বিস্তারিত দেখুন
+</div>
 
-<div class="features">${data.features}</div>
+<div class="features">
+${p.features || ""}
+</div>
 
-<button class="order-btn" onclick="showOrderForm(this)">
+<button class="order-btn" onclick="toggleForm(this)">
 এখনই অর্ডার করুন
 </button>
 
 <div class="order-form">
 
-<input type="text" class="customer-name" placeholder="আপনার নাম">
-<input type="text" class="customer-phone" placeholder="ফোন নাম্বার">
-<textarea class="customer-address" placeholder="ঠিকানা"></textarea>
+<input type="text" class="name" placeholder="আপনার নাম">
+
+<input type="text" class="phone" placeholder="ফোন নাম্বার">
+
+<textarea class="address" placeholder="আপনার ঠিকানা"></textarea>
 
 <button class="confirm-btn" onclick="submitOrder(this)">
-অর্ডার কনফার্ম করুন
+অর্ডার কনফার্ম
 </button>
 
 </div>
@@ -323,51 +466,66 @@ container.innerHTML += `
 </div>
 
 </div>
+
 `;
 
 });
 
 });
 
-/* FORM TOGGLE */
-function showOrderForm(btn){
-let form = btn.nextElementSibling;
-form.style.display = (form.style.display === "block") ? "none" : "block";
+/* FUNCTIONS */
+
+function toggleDesc(el){
+
+let d = el.nextElementSibling;
+
+d.style.display =
+d.style.display === "block" ? "none" : "block";
+
 }
 
-/* ORDER SUBMIT */
+function toggleForm(btn){
+
+let f = btn.nextElementSibling;
+
+f.style.display =
+f.style.display === "block" ? "none" : "block";
+
+}
+
 function submitOrder(btn){
 
-let form = btn.parentElement;
+let f = btn.parentElement;
 
-let name = form.querySelector(".customer-name").value;
-let phone = form.querySelector(".customer-phone").value;
-let address = form.querySelector(".customer-address").value;
+let name = f.querySelector(".name").value;
+let phone = f.querySelector(".phone").value;
+let address = f.querySelector(".address").value;
 
-let productName = form.parentElement.querySelector(".card-title").innerText;
+let product =
+f.parentElement.querySelector(".card-title").innerText;
 
 if(!name || !phone || !address){
+
 alert("সব তথ্য পূরণ করুন");
 return;
+
 }
 
-let orderId = Date.now();
+db.ref("orders/" + Date.now()).set({
 
-db.ref("orders/" + orderId).set({
-product: productName,
+product,
 name,
 phone,
 address,
-time: new Date().toLocaleString()
+status:"Pending",
+time:new Date().toLocaleString()
+
 });
 
 alert("অর্ডার সফল হয়েছে");
 
-form.style.display = "none";
+f.style.display = "none";
 
-form.querySelector(".customer-name").value = "";
-form.querySelector(".customer-phone").value = "";
-form.querySelector(".customer-address").value = "";
 }
 
 </script>
