@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>স্বপ্ন শপ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== SAME DESIGN (NO CHANGE) ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Hind Siliguri',sans-serif;
+}
+
+body{
+background:#f3f5f9;
+color:#111827;
+}
+
+.navbar{
+width:100%;
+background:#071b36;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+.logo span{ color:#ff8a00; }
+
+.nav-links{ display:flex; gap:25px; }
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-size:17px;
+font-weight:500;
+}
+
+.nav-links a:hover{ color:#ff8a00; }
+
+.hero{
+width:100%;
+min-height:85vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:60px 8%;
+background:
+linear-gradient(rgba(4,15,34,.88),rgba(4,15,34,.88)),
+url('https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-left{ max-width:550px; }
+
+.badge{
+display:inline-block;
+padding:8px 18px;
+border-radius:30px;
+background:#ff8a00;
+font-size:14px;
+margin-bottom:18px;
+}
+
+.hero-left h1{ font-size:60px; line-height:1.1; margin-bottom:20px; }
+
+.hero-left p{ font-size:20px; line-height:1.7; margin-bottom:25px; }
+
+.hero-btn{
+display:inline-block;
+padding:16px 35px;
+background:#ff8a00;
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:700;
+border-radius:12px;
+}
+
+.section{ padding:80px 8%; }
+
+.section-title{
+font-size:42px;
+text-align:center;
+margin-bottom:50px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card-body{ padding:22px; }
+
+.discount{
+background:#071b36;
+color:white;
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+font-size:14px;
+margin-bottom:12px;
+}
+
+.card-title{ font-size:30px; font-weight:700; margin-bottom:10px; }
+
+.old-price{
+text-decoration:line-through;
+color:#6b7280;
+font-size:18px;
+}
+
+.new-price{
+font-size:36px;
+font-weight:700;
+color:#ff8a00;
+margin-top:10px;
+}
+
+.features{ margin-top:15px; line-height:2; color:#374151; }
+
+.order-btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+margin-top:20px;
+background:#ff8a00;
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+.order-form{
+display:none;
+margin-top:20px;
+padding:20px;
+background:#f8fafc;
+border-radius:18px;
+border:2px solid #e2e8f0;
+}
+
+.order-form input,
+.order-form textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:none;
+outline:none;
+border-radius:12px;
+background:#e2e8f0;
+font-size:16px;
+}
+
+.confirm-btn{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:14px;
+background:#16a34a;
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+.footer{
+background:#071b36;
+color:white;
+padding:35px;
+text-align:center;
+margin-top:60px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+<div class="logo">স্বপ্ন <span>শপ</span></div>
+
+<div class="nav-links">
+<a href="#">হোম</a>
+<a href="#products">প্রোডাক্ট</a>
+<a href="#">রিভিউ</a>
+<a href="#">যোগাযোগ</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="badge">🔥 ২০% বিশেষ ছাড়</div>
+
+<h1>আপনার রান্নার<br>সেরা সঙ্গী</h1>
+
+<p>প্রিমিয়াম ব্লেন্ডার দিয়ে তৈরি করুন স্বাস্থ্যকর ও সুস্বাদু খাবার।</p>
+
+<a href="#products" class="hero-btn">এখনই কিনুন</a>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS (DYNAMIC) -->
+<section class="section" id="products">
+
+<h2 class="section-title">আমাদের জনপ্রিয় প্রোডাক্ট</h2>
+
+<div class="products" id="productList"></div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+© ২০২৬ স্বপ্ন শপ | All Rights Reserved
+</footer>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+apiKey: "AIzaSyAzXwo_DPBe6PQPiTvqkefiLE2Mo3D3B0E",
+authDomain: "kotkoti.firebaseapp.com",
+databaseURL: "https://kotkoti-default-rtdb.asia-southeast1.firebasedatabase.app",
+projectId: "kotkoti",
+storageBucket: "kotkoti.firebasestorage.app"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+/* =========================
+   LOAD PRODUCTS REALTIME
+========================= */
+
+db.ref("products").on("value", (snapshot) => {
+
+let container = document.getElementById("productList");
+container.innerHTML = "";
+
+snapshot.forEach((child) => {
+
+let data = child.val();
+
+container.innerHTML += `
+<div class="card">
+
+<img src="${data.image}">
+
+<div class="card-body">
+
+<div class="discount">${data.discount}</div>
+
+<div class="card-title">${data.name}</div>
+
+<div class="old-price">৳${data.oldPrice}</div>
+
+<div class="new-price">৳${data.newPrice}</div>
+
+<div class="features">${data.features}</div>
+
+<button class="order-btn" onclick="showOrderForm(this)">
+এখনই অর্ডার করুন
+</button>
+
+<div class="order-form">
+
+<input type="text" class="customer-name" placeholder="আপনার নাম">
+<input type="text" class="customer-phone" placeholder="ফোন নাম্বার">
+<textarea class="customer-address" placeholder="ঠিকানা"></textarea>
+
+<button class="confirm-btn" onclick="submitOrder(this)">
+অর্ডার কনফার্ম করুন
+</button>
+
+</div>
+
+</div>
+
+</div>
+`;
+
+});
+
+});
+
+/* FORM TOGGLE */
+function showOrderForm(btn){
+let form = btn.nextElementSibling;
+form.style.display = (form.style.display === "block") ? "none" : "block";
+}
+
+/* ORDER SUBMIT */
+function submitOrder(btn){
+
+let form = btn.parentElement;
+
+let name = form.querySelector(".customer-name").value;
+let phone = form.querySelector(".customer-phone").value;
+let address = form.querySelector(".customer-address").value;
+
+let productName = form.parentElement.querySelector(".card-title").innerText;
+
+if(!name || !phone || !address){
+alert("সব তথ্য পূরণ করুন");
+return;
+}
+
+let orderId = Date.now();
+
+db.ref("orders/" + orderId).set({
+product: productName,
+name,
+phone,
+address,
+time: new Date().toLocaleString()
+});
+
+alert("অর্ডার সফল হয়েছে");
+
+form.style.display = "none";
+
+form.querySelector(".customer-name").value = "";
+form.querySelector(".customer-phone").value = "";
+form.querySelector(".customer-address").value = "";
+}
+
+</script>
+
+</body>
+</html>
